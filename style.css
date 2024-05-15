@@ -260,6 +260,16 @@ p {
 
 /* styly pro hlavní stránku */
 
+.background{
+  background-image: url(desk.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  margin-top: 70px;
+
+}
+
 .content-container{
   height: 40rem;
   display: flex;
