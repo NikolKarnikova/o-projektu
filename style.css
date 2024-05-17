@@ -209,6 +209,19 @@ p {
   font-size: 18px;
 }
 
+@media (max-width: 1024px) {
+  .wrapper {
+    flex: 1 1 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
 /*styly pro stránku vize*/
 
 .wide-box {
