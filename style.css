@@ -37,11 +37,11 @@ header {
   background-color: #e0d8cd;
 }
 
-li{
+li {
   list-style: none;
 }
 
-a{
+a {
   color: black;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
@@ -53,35 +53,37 @@ a{
 }
 
 
-.container{
+.container {
   width: 1600px;
   margin: auto;
 }
 
-.subcontainer{
+.subcontainer {
   width: 85%;
   margin: auto;
 }
 
-.navbar{
+.navbar {
   width: 100%;
   min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav-menu{
+
+.nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 60px;
 }
 
-.hamburger{
+.hamburger {
   display: none;
   cursor: pointer;
 }
-.bar{
+
+.bar {
   display: block;
   width: 25px;
   height: 3px;
@@ -91,46 +93,52 @@ a{
 
 }
 
-#main-container{
+#main-container {
   margin-top: 70px;
 }
 
-@media(max-width:1600px){
-  .container{
-  width: 100%;
-}}
+@media(max-width:1600px) {
+  .container {
+    width: 100%;
+  }
+}
 
 
-@media(max-width:767px){
-  .hamburger{
+@media(max-width:767px) {
+  .hamburger {
     display: block;
   }
-  .hamburger.active .bar:nth-child(2){
-opacity: 0;
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
   }
-  .hamburger.active .bar:nth-child(1){
+
+  .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  .hamburger.active .bar:nth-child(3){
+
+  .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .nav-menu{
+  .nav-menu {
     position: fixed;
     left: -100%;
     top: -100%;
     top: 70px;
     gap: 0;
     flex-direction: column;
-    background-color:#e0d8cd;
+    background-color: #e0d8cd;
     width: 100%;
     text-align: center;
     transition: 0.3s;
   }
-  .nav-item{
+
+  .nav-item {
     margin: 16px 0;
   }
-  .nav-menu.active{
+
+  .nav-menu.active {
     left: 0;
   }
 }
@@ -203,64 +211,211 @@ p {
 
 /*styly pro stránku vize*/
 
-
 .wide-box {
+  position: relative;
+  background: url('postit-big.png') center;
+  background-repeat: no-repeat;
+  background-size: 70em 100%;
+  text-align: center;
   width: 100%;
-  height: 200px;
-  margin-bottom: 20px;
+  height: 15em;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.wide-box h1 p {
+.wide-box h1,
+.wide-box p {
   text-align: center;
   font-size: 16px;
   margin: 0;
 }
+
 
 .small-boxes {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
 }
 
-.small-boxes h1 p {
+.small-boxes h1,
+.small-boxes p {
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
 }
 
-.small-boxes h1 {
-  margin-bottom: 5px;
-}
-
 .small-box {
-  flex: 1;
-  height: 100px;
-  margin-right: 10px;
+  flex: 1 1 calc(25% - 10px);
+  height: 50vh;
   display: flex;
   flex-direction: column;
 }
 
-.box-content {
-  padding: 10px;
+
+.row-first,
+.row-second,
+.row-third,
+.row-fourth {
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
 }
+
+.box-content__first {
+  position: relative;
+  background: url('postit-square.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 200%;
+  max-height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.box-content__first h1 {
+  position: absolute;
+  top: 100%;
+  left: 39%;
+}
+
+.box-content__second {
+  position: relative;
+  background: url('postit-circle.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 150%;
+  max-height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.box-content__second h1 {
+  position: absolute;
+  top: 100%;
+  left: 39%;
+}
+
+.box-content__third {
+  position: relative;
+  background: url('postit-square.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 150%;
+  max-height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.box-content__third h1 {
+  position: absolute;
+  top: 100%;
+  left: 39%;
+}
+
+.box-content__fourth {
+  position: relative;
+  background: url('postit-circle.png') center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 150%;
+  max-height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.box-content__fourth h1 {
+  position: absolute;
+  top: 100%;
+  left: 39%;
+}
+
+@media (max-width: 1024px) {
+
+
+  .wide-box {
+    background-size: contain;
+  }
+
+  .small-box {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .box-content__second h1,
+  .box-content__first h1 {
+    bottom: 0;
+  }
+
+  .row-first,
+  .row-second,
+  .row-third,
+  .row-fourth {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .wide-box {
+    background-size: contain;
+  }
+
+  .small-box {
+    flex: 1 1 100%;
+  }
+
+  .box-content__first,
+  .box-content__second,
+  .box-content__third,
+  .box-content__fourth {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-size: contain;
+  }
+
+  .box-content__second h1 {
+    bottom: 1rem;
+  }
+
+  .row-first,
+  .row-second,
+  .row-third,
+  .row-fourth {
+    display: none;
+  }
+}
+
 
 /* styly pro stránku o projektu */
 
 
-.project_content{
+.project_content {
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  width: 80% ;
+  width: 80%;
   text-align: center;
   margin: 10%;
 }
 
 /* styly pro hlavní stránku */
 
-.background{
+.background {
   background-image: url(desk.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -270,7 +425,7 @@ p {
 
 }
 
-.content-container{
+.content-container {
   height: 40rem;
   display: flex;
   flex-direction: column;
@@ -278,7 +433,7 @@ p {
   align-items: center;
 }
 
-.homepage-title{
+.homepage-title {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
   text-align: center;
@@ -291,14 +446,14 @@ p {
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
-  border-color:black;
+  border-color: black;
   color: black;
   font-family: "Montserrat", sans-serif;
 }
 
 /* styly pro mrtvý odkaz na projekt */
 
-.missing-project{
+.missing-project {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -307,7 +462,7 @@ p {
   background-color: black;
 }
 
-.apology{
+.apology {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
   text-align: center;
@@ -321,7 +476,7 @@ p {
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
-  border-color:white;
+  border-color: white;
   color: white;
   font-family: "Montserrat", sans-serif;
 }
