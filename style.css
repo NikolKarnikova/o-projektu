@@ -238,11 +238,15 @@ p {
   justify-content: center;
 }
 
-.wide-box h1,
-.wide-box p {
+.wide-box h1 {
   text-align: center;
   font-size: 16px;
-  margin: 0;
+}
+
+.wide-box p {
+  text-align: justify;
+  font-size: 16px;
+  margin: 2rem;
 }
 
 
@@ -297,6 +301,15 @@ p {
   left: 39%;
 }
 
+.image-storyboard {
+  position: absolute;
+  width: 30%;
+  max-width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .box-content__second {
   position: relative;
   background: url('postit-circle.png') center;
@@ -317,6 +330,7 @@ p {
   left: 39%;
 }
 
+
 .box-content__third {
   position: relative;
   background: url('postit-square.png') center;
@@ -329,6 +343,15 @@ p {
   max-height: 100%;
   text-align: center;
   justify-content: center;
+}
+
+.image-wireframe {
+  position: absolute;
+  width: 30%;
+  max-width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .box-content__third h1 {
@@ -386,6 +409,12 @@ p {
 
   .wide-box {
     background-size: contain;
+
+  }
+
+  .wide-box p h1 {
+    font-size: 11px;
+    width: 70%;
   }
 
   .small-box {
