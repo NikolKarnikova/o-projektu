@@ -149,6 +149,8 @@ a {
 
 .wrapper {
   display: flex;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 .column {
@@ -159,7 +161,8 @@ a {
 .circle-image {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
+  border-radius: 100%;
+  ;
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 20%;
@@ -193,46 +196,34 @@ p {
 /*styly pro stránku vize*/
 
 .wide-box {
-  position: relative;
-  background: url('postit-big.png') center;
-  background-repeat: no-repeat;
-  background-size: 70em 100%;
+  font-family: "Montserrat", sans-serif;
+  border: solid;
+  border-radius: 10% / 50%;
   text-align: center;
-  width: 100%;
-  height: 20em;
-  max-width: 100%;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-.wide-box h1 {
-  text-align: center;
-  font-size: 16px;
-}
 
-.wide-box p {
+.wide-box__text {
   max-width: 80%;
   align-self: center;
-  text-align: center;
-  font-size: 16px;
-  margin: 2rem;
+  text-align: justify;
+  font-size: 1.5rem;
+  padding: 3%;
 }
 
 
 .small-boxes {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: space-between;
 }
 
-.small-boxes h1,
-.small-boxes p {
-  text-align: center;
-  font-size: 1rem;
-  margin: 0;
-}
 
 .small-box {
   flex: 1 1 calc(25% - 10px);
@@ -240,7 +231,6 @@ p {
   display: flex;
   flex-direction: column;
 }
-
 
 .row-first,
 .row-second,
@@ -253,117 +243,97 @@ p {
 
 .box-content__first {
   position: relative;
-  background: url('postit-square.png') center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: 200%;
-  max-height: 100%;
+  width: 80%;
+  max-width: 80%;
+  height: 80%;
+  max-height: 80%;
   text-align: center;
   justify-content: center;
-}
-
-.box-content__first h1 {
-  position: absolute;
-  top: 100%;
-  left: 39%;
+  margin-left: 5%;
 }
 
 .image-storyboard {
-  position: absolute;
-  width: 30%;
-  max-width: 30%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border: solid;
+  border-radius: 50% 20% / 10% 40%;
+  ;
+  width: 100%;
+  max-width: 100%
+}
+
+.small-box__first--title,
+.small-box__second--title,
+.small-box__third--title,
+.small-box__fourth--title {
+  text-align: center;
 }
 
 .box-content__second {
   position: relative;
-  background: url('postit-circle.png') center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
   width: 100%;
   max-width: 100%;
-  height: 150%;
+  height: 100%;
   max-height: 100%;
   text-align: center;
   justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-.box-content__second h1 {
-  position: absolute;
-  top: 100%;
-  left: 39%;
+.box-content__second p {
+  border: solid;
+  border-radius: 100%;
+  width: 100%;
+  font-size: 1rem;
+  padding: 15%;
 }
-
 
 .box-content__third {
   position: relative;
-  background: url('postit-square.png') center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: 150%;
-  max-height: 100%;
+  width: 80%;
+  max-width: 80%;
+  height: 80%;
+  max-height: 80%;
   text-align: center;
   justify-content: center;
+  margin-left: 10%;
 }
 
 .image-wireframe {
-  position: absolute;
-  width: 30%;
-  max-width: 30%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.box-content__third h1 {
-  position: absolute;
-  top: 100%;
-  left: 39%;
+  border: solid;
+  border-radius: 50% 20% / 10% 40%;
+  width: 100%;
+  max-width: 100%
 }
 
 .box-content__fourth {
   position: relative;
-  background: url('postit-circle.png') center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
   width: 100%;
   max-width: 100%;
-  height: 150%;
-  max-height: 100%;
   text-align: center;
   justify-content: center;
+  padding-right: 5%;
 }
 
-.box-content__fourth h1 {
-  position: absolute;
-  top: 100%;
-  left: 39%;
+.box-content__fourth p {
+  border: solid;
+  border-radius: 100%;
+  width: 100%;
+  font-size: 1rem;
+  padding: 15%;
 }
+
 
 @media (max-width: 1024px) {
 
 
-  .wide-box {
-    background-size: cover;
-  }
-
   .small-box {
-    flex: 1 1 calc(50% - 10px);
+    flex: 1 1 calc(35% - 10px);
+    height: 100%;
   }
 
-  .box-content__second h1,
-  .box-content__first h1 {
-    bottom: 0;
+  .wide-box__text {
+    width: 100%;
+    font-size: 1rem;
   }
 
   .row-first,
@@ -377,16 +347,12 @@ p {
 
 @media (max-width: 768px) {
 
-  .wide-box {
-    background-size: contain;
-    height: ;
 
+  .wide-box__text {
+    font-size: 1rem;
+    width: 100%;
   }
 
-  .wide-box p h1 {
-    font-size: 11px;
-    width: 70%;
-  }
 
   .small-box {
     flex: 1 1 100%;
@@ -400,10 +366,6 @@ p {
     flex-direction: column;
     flex-wrap: nowrap;
     background-size: contain;
-  }
-
-  .box-content__second h1 {
-    bottom: 1rem;
   }
 
   .row-first,
