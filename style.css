@@ -34,7 +34,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #e0d8cd;
+  background-color: #EDEADF;
   z-index: 1;
 }
 
@@ -178,6 +178,7 @@ p {
   display: inline-block;
   line-height: 1.5;
   font-size: 18px;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
